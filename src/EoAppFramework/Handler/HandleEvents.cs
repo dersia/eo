@@ -13,9 +13,9 @@ namespace SiaConsulting.EO
             var pumps = EoRegistry.GetEventPumps(@event);
             foreach(var pump in pumps) 
             {
-                var eventPump = (Pump<IEventProcessor>)pump;
+                var eventPump = pump;
                 var context = CommonUtils.LoadContext(@event, eventPump.ContextLoader, eventStream, log);
-                foreach(var result in Process<T>(@event, context, eventPump.Processor, log))
+                foreach(var result in Process<T>(@event, context, (IEventProcessor)eventPump.Processor, log))
                 {
                     yield return result;
                 }

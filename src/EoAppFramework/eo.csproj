@@ -4,7 +4,7 @@
     <AssemblyName>SiaConsulting.EO</AssemblyName>
     <RootNamespace>SiaConsulting.EO</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.4</Version>
+    <Version>0.0.7</Version>
     <Authors>Sia Consulting Ltd.</Authors>
     <Product>EventOriented Application Framework</Product>
     <PackageId>SiaConsulting.EO</PackageId>
@@ -14,8 +14,8 @@
     <PackageProjectUrl>https://github.com/dersia/eo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dersia/eo</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <AssemblyVersion>0.0.4.0</AssemblyVersion>
-    <FileVersion>0.0.4.0</FileVersion>
+    <AssemblyVersion>0.0.7.0</AssemblyVersion>
+    <FileVersion>0.0.7.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.1-rc" />

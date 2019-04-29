@@ -12,9 +12,9 @@ namespace SiaConsulting.EO
             var pumps = EoRegistry.GetQueryPumps(query);
             foreach(var pump in pumps) 
             {
-                var queryPump = (Pump<IQueryProcessor>)pump;
+                var queryPump = pump;
                 var context = CommonUtils.LoadContext(query, queryPump.ContextLoader, eventStream, log);
-                foreach(var result in Process<T>(query, context, queryPump.Processor, log))
+                foreach(var result in Process<T>(query, context, (IQueryProcessor)queryPump.Processor, log))
                 {
                     yield return result;
                 }

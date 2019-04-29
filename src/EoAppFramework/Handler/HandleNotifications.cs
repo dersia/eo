@@ -12,9 +12,9 @@ namespace SiaConsulting.EO
             var pumps = EoRegistry.GetNotificationPumps(notification);
             foreach(var pump in pumps) 
             {
-                var notificationPump = (Pump<INotificationProcessor>)pump;
+                var notificationPump = pump;
                 var context = CommonUtils.LoadContext(notification, notificationPump.ContextLoader, eventStream, log);
-                foreach(var result in Process(notification, context, notificationPump.Processor, log))
+                foreach(var result in Process(notification, context, (INotificationProcessor)notificationPump.Processor, log))
                 {
                     yield return result;
                 }

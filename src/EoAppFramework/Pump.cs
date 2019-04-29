@@ -2,12 +2,11 @@ using SiaConsulting.EO.Abstractions;
 
 namespace SiaConsulting.EO
 {
-    public class Pump {}
-    public class Pump<T> : Pump where T : IProcessor
+    public class Pump
     {
         public ContextLoaderBase ContextLoader { get; }
-        public T Processor { get; }
-        public Pump(ContextLoaderBase contextLoader, T processor) 
+        public IProcessor Processor { get; }
+        public Pump(ContextLoaderBase contextLoader, IProcessor processor) 
         {
             ContextLoader = contextLoader;
             Processor = processor;

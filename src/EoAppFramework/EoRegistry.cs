@@ -11,24 +11,24 @@ namespace SiaConsulting.EO
         private static readonly Dictionary<Type, List<Pump>> _notificationPumps = new Dictionary<Type, List<Pump>>();
         private static readonly Dictionary<Type, List<Pump>> _queryPumps = new Dictionary<Type, List<Pump>>();
         private static readonly Dictionary<Type, List<Pump>> _eventPumps = new Dictionary<Type, List<Pump>>();
-        public static void RegisterCommandPump<TCommand, TProcessor>(Pump<TProcessor> pump) where TCommand: ICommand where TProcessor: IProcessor
+        public static void RegisterCommandPump<TCommand>(Pump pump) where TCommand: ICommand 
         {
-            SafeAdd<TCommand>(_commandPumps, (Pump)pump);
+            SafeAdd<TCommand>(_commandPumps, pump);
         }
 
-        public static void RegisterNotificationPump<TCommand, TProcessor>(Pump<TProcessor> pump) where TCommand: INotification where TProcessor : IProcessor
+        public static void RegisterNotificationPump<TCommand>(Pump pump) where TCommand: INotification 
         {
-            SafeAdd<TCommand>(_notificationPumps, (Pump)pump);
+            SafeAdd<TCommand>(_notificationPumps, pump);
         }
 
-        public static void RegisterQueryPump<TCommand, TProcessor>(Pump<TProcessor> pump) where TCommand: IQuery where TProcessor: IProcessor
+        public static void RegisterQueryPump<TCommand>(Pump pump) where TCommand: IQuery 
         {
-            SafeAdd<TCommand>(_queryPumps, (Pump)pump);
+            SafeAdd<TCommand>(_queryPumps, pump);
         }
 
-        public static void RegisterEventPump<TCommand, TProcessor>(Pump<TProcessor> pump) where TCommand : IEvent where TProcessor : IProcessor
+        public static void RegisterEventPump<TCommand>(Pump pump) where TCommand : IEvent 
         {
-            SafeAdd<TCommand>(_eventPumps, (Pump)pump);
+            SafeAdd<TCommand>(_eventPumps, pump);
         }
 
         public static List<Pump> GetCommandPumps<TCommand>(TCommand command) where TCommand : ICommand

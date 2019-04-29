@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28809.33
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eo", "EoAppFramework\eo.csproj", "{4A0EB6EF-67C6-4A37-8BD1-C22C51A68E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eo.abstractions", "EoAppFramework.Abstractions\eo.abstractions.csproj", "{336C7646-5DDB-47E9-BD0C-C0E993F2C7EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eo.abstractions", "EoAppFramework.Abstractions\eo.abstractions.csproj", "{336C7646-5DDB-47E9-BD0C-C0E993F2C7EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
